@@ -14,14 +14,33 @@ packages:
   gitUsername: ArtiKhareGitlabnew
   gitBranch: master
 - name: AddIntsPackage
+  version: "1.0"
   gitServerName: srcCtrl_AzRepos_Arti_IBM
   gitUrl: https://dev.azure.com/ArtiKhare/AddIntsPackage/_git
   gitUsername: ArtiKhare
   gitBranch: master
 services:
+- serviceName: project.serengeti_github.integrations:FSDFS
+  packages:
+  - name: Serengeti_GithubProject
+    version: "1.0"
+  - name: AddIntsPackage
+    version: "1.0"
+  - name: substractpackage
+    version: "1.0"
+- serviceName: AddIntsPackage:addIntsFS
+  packages:
+  - name: AddIntsPackage
+    version: "1.0"
+- serviceName: pub.math:addInts
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2043
 - serviceName: project.serengeti_github.integrations:UntitledVFDV
   packages:
   - name: Serengeti_GithubProject
+    version: "1.0"
+  - name: AddIntsPackage
     version: "1.0"
   - name: substractpackage
     version: "1.0"
@@ -36,6 +55,8 @@ services:
 - serviceName: project.serengeti_github.integrations:gcd_github
   packages:
   - name: Serengeti_GithubProject
+    version: "1.0"
+  - name: AddIntsPackage
     version: "1.0"
   - name: substractpackage
     version: "1.0"
