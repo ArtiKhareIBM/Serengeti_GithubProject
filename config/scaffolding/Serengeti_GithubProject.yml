@@ -13,14 +13,31 @@ packages:
   gitUsername: ArtiKhareIBM
   gitBranch: main
 - name: substractpackage
+  version: "1.0"
   gitServerName: srcCtrl_gitlab_Arti
   gitUrl: https://gitlab.com/ArtiKhareGitlabnew
   gitUsername: ArtiKhareGitlabnew
   gitBranch: master
 services:
+- serviceName: project.serengeti_github.integrations:UntitledVFDV
+  packages:
+  - name: Serengeti_GithubProject
+    version: "1.0"
+  - name: substractpackage
+    version: "1.0"
+- serviceName: SubstractPackage:substractFS
+  packages:
+  - name: substractpackage
+    version: "1.0"
+- serviceName: pub.math:subtractInts
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2043
 - serviceName: project.serengeti_github.integrations:gcd_github
   packages:
   - name: Serengeti_GithubProject
+    version: "1.0"
+  - name: substractpackage
     version: "1.0"
 - serviceName: pub.date:getCurrentDate
   packages:
