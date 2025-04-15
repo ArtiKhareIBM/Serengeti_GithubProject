@@ -19,6 +19,11 @@ packages:
   gitUrl: https://dev.azure.com/ArtiKhare/AddIntsPackage/_git
   gitUsername: ArtiKhare
   gitBranch: master
+- name: LowerFSPackage
+  gitServerName: srcGithubCtrl_Arti
+  gitUrl: https://github.com/ArtiKhareIBM
+  gitUsername: ArtiKhareIBM
+  gitBranch: main
 services:
 - serviceName: project.serengeti_github.integrations:FSDFS
   packages:
