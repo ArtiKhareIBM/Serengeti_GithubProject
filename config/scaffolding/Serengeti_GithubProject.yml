@@ -20,6 +20,7 @@ packages:
   gitUsername: ArtiKhare
   gitBranch: master
 - name: LowerFSPackage
+  version: "1.0"
   gitServerName: srcGithubCtrl_Arti
   gitUrl: https://github.com/ArtiKhareIBM
   gitUsername: ArtiKhareIBM
@@ -32,6 +33,8 @@ services:
   - name: AddIntsPackage
     version: "1.0"
   - name: substractpackage
+    version: "1.0"
+  - name: LowerFSPackage
     version: "1.0"
 - serviceName: AddIntsPackage:addIntsFS
   packages:
@@ -49,6 +52,8 @@ services:
     version: "1.0"
   - name: substractpackage
     version: "1.0"
+  - name: LowerFSPackage
+    version: "1.0"
 - serviceName: SubstractPackage:substractFS
   packages:
   - name: substractpackage
@@ -65,7 +70,27 @@ services:
     version: "1.0"
   - name: substractpackage
     version: "1.0"
+  - name: LowerFSPackage
+    version: "1.0"
 - serviceName: pub.date:getCurrentDate
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2043
+- serviceName: project.serengeti_github.integrations:lowerfspkg_fs
+  packages:
+  - name: Serengeti_GithubProject
+    version: "1.0"
+  - name: AddIntsPackage
+    version: "1.0"
+  - name: substractpackage
+    version: "1.0"
+  - name: LowerFSPackage
+    version: "1.0"
+- serviceName: LowerFSPackage:lowerFS
+  packages:
+  - name: LowerFSPackage
+    version: "1.0"
+- serviceName: pub.string:toLower
   packages:
   - name: WmPublic
     version: 11.1.0.0.2043
