@@ -20,16 +20,38 @@ packages:
   gitUsername: ArtiKhare
   gitBranch: master
 - name: LowerFSPackage
+  version: "1.0"
   gitServerName: srcGithubCtrl_Arti
   gitUrl: https://github.com/ArtiKhareIBM
   gitUsername: ArtiKhareIBM
   gitBranch: main
 - name: InvalidPackage
+  version: "1.0"
   gitServerName: srcGithubCtrl_Arti
   gitUrl: https://github.com/ArtiKhareIBM
   gitUsername: ArtiKhareIBM
   gitBranch: main
 services:
+- serviceName: project.serengeti_github.integrations:Copy_lowerfspkg_fs
+  packages:
+  - name: Serengeti_GithubProject
+    version: "1.0"
+  - name: AddIntsPackage
+    version: "1.0"
+  - name: substractpackage
+    version: "1.0"
+  - name: LowerFSPackage
+    version: "1.0"
+  - name: InvalidPackage
+    version: "1.0"
+- serviceName: LowerFSPackage:lowerFS
+  packages:
+  - name: LowerFSPackage
+    version: "1.0"
+- serviceName: pub.string:toLower
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2043
 - serviceName: project.serengeti_github.integrations:FSDFS
   packages:
   - name: Serengeti_GithubProject
@@ -39,6 +61,8 @@ services:
   - name: substractpackage
     version: "1.0"
   - name: LowerFSPackage
+    version: "1.0"
+  - name: InvalidPackage
     version: "1.0"
 - serviceName: AddIntsPackage:addIntsFS
   packages:
@@ -58,6 +82,8 @@ services:
     version: "1.0"
   - name: LowerFSPackage
     version: "1.0"
+  - name: InvalidPackage
+    version: "1.0"
 - serviceName: SubstractPackage:substractFS
   packages:
   - name: substractpackage
@@ -76,6 +102,8 @@ services:
     version: "1.0"
   - name: LowerFSPackage
     version: "1.0"
+  - name: InvalidPackage
+    version: "1.0"
 - serviceName: pub.date:getCurrentDate
   packages:
   - name: WmPublic
@@ -90,11 +118,5 @@ services:
     version: "1.0"
   - name: LowerFSPackage
     version: "1.0"
-- serviceName: LowerFSPackage:lowerFS
-  packages:
-  - name: LowerFSPackage
+  - name: InvalidPackage
     version: "1.0"
-- serviceName: pub.string:toLower
-  packages:
-  - name: WmPublic
-    version: 11.1.0.0.2043
