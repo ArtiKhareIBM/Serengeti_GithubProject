@@ -92,6 +92,34 @@ services:
   packages:
   - name: WmPublic
     version: 11.1.0.0.2043
+- serviceName: project.serengeti_github.integrations:debugLogFlowServiceWithDependency
+  packages:
+  - name: Serengeti_GithubProject
+    version: "1.0"
+  - name: AddIntsPackage
+    version: "1.0"
+  - name: substractpackage
+    version: "1.0"
+  - name: LowerFSPackage
+    version: "1.0"
+  - name: InvalidPackage
+    version: "1.0"
+- serviceName: project.serengeti_github.integrations:dependencyForDebugLogFlowService
+  packages:
+  - name: Serengeti_GithubProject
+    version: "1.0"
+  - name: AddIntsPackage
+    version: "1.0"
+  - name: substractpackage
+    version: "1.0"
+  - name: LowerFSPackage
+    version: "1.0"
+  - name: InvalidPackage
+    version: "1.0"
+- serviceName: pub.flow:debugLog
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2043
 - serviceName: project.serengeti_github.integrations:gcd_github
   packages:
   - name: Serengeti_GithubProject
