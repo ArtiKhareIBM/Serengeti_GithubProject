@@ -120,3 +120,15 @@ services:
     version: "1.0"
   - name: InvalidPackage
     version: "1.0"
+- serviceName: project.serengeti_github.integrations:summationFlowService
+  packages:
+  - name: Serengeti_GithubProject
+    version: "1.0"
+  - name: AddIntsPackage
+    version: "1.0"
+  - name: substractpackage
+    version: "1.0"
+  - name: LowerFSPackage
+    version: "1.0"
+  - name: InvalidPackage
+    version: "1.0"
